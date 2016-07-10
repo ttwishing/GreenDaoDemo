@@ -1,0 +1,29 @@
+apply plugin: 'java'
+
+
+configurations {
+    archives {
+        extendsFrom configurations.default
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+        resources {
+            srcDir 'src-template'
+        }
+    }
+    test {
+        java {
+            srcDir 'src-test'
+        }
+    }
+}
+
+dependencies {
+    compile 'org.freemarker:freemarker:2.3.23'
+    testCompile 'junit:junit:4.12'
+}

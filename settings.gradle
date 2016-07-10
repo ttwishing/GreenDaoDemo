@@ -1,0 +1,1 @@
+include ':app', ':lib_daocore', ':lib_daogenerator'
