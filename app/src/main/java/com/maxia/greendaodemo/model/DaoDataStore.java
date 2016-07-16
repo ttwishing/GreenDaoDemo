@@ -14,6 +14,9 @@ import de.greenrobot.dao.query.DeleteQuery;
  */
 public abstract class DaoDataStore<Key, Value> implements DataStore<Key, Value> {
 
+    /**
+     * 数据库查询公用锁
+     */
     private static final ReentrantLock lock = new ReentrantLock(true);
 
     protected AbstractDao<Value, Key> dao;
