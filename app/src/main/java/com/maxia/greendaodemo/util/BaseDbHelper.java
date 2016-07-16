@@ -45,6 +45,18 @@ public abstract class BaseDbHelper {
         return this.daoSession;
     }
 
+    public DaoMaster getDaoMaster() {
+        return daoMaster;
+    }
+
+    public SQLiteDatabase getWritableDatabase() {
+        return db;
+    }
+
+    /**
+     * 事务里执行
+     * @param r
+     */
     public void runInTx(Runnable r) {
         DaoDataStore.lock();
         try {
@@ -57,5 +69,6 @@ public abstract class BaseDbHelper {
     protected String getDatabaseName() {
         return DATABASE_NAME;
     }
+
 
 }

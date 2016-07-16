@@ -13,5 +13,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         OpenDbHelper openDbHelper = new OpenDbHelper();
+        CustomerModel customerModel = new CustomerModel(openDbHelper);
     }
 }
