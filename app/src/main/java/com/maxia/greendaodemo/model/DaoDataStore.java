@@ -11,6 +11,8 @@ import de.greenrobot.dao.query.DeleteQuery;
 
 /**
  * Created by kurt on 6/6/16.
+ *
+ * CRUD模板
  */
 public abstract class DaoDataStore<Key, Value> implements DataStore<Key, Value> {
 

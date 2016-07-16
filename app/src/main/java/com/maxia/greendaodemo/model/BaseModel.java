@@ -7,6 +7,9 @@ import com.maxia.greendaodemo.util.BaseDbHelper;
  */
 public abstract class BaseModel<Key, T> {
 
+    /**
+     * 由其代理操作
+     */
     private DataStore<Key, T> dataStore;
 
     protected final BaseDbHelper dbHelper;
@@ -24,12 +27,29 @@ public abstract class BaseModel<Key, T> {
 
     protected abstract DataStore<Key, T> createDataStore();
 
+    /**
+     * 根据value获取key
+     *
+     * @param value
+     * @return
+     */
     protected abstract Key getKey(T value);
 
+    /**
+     * 删除
+     *
+     * @param key
+     */
     public void remove(Key key) {
         getDataStore().remove(key);
     }
 
+    /**
+     * 查询
+     *
+     * @param key
+     * @return
+     */
     public T get(Key key) {
         try {
             return getDataStore().load(key);
