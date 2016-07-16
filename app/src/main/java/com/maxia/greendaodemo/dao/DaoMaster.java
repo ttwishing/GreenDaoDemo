@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import de.greenrobot.dao.AbstractDaoMaster;
 import de.greenrobot.dao.identityscope.IdentityScopeType;
+import de.greenrobot.dao.internal.DaoConfig;
 
 import com.maxia.greendaodemo.dao.CustomerDao;
 import com.maxia.greendaodemo.dao.OrderDao;
@@ -40,6 +41,7 @@ public class DaoMaster extends AbstractDaoMaster {
         public void onCreate(SQLiteDatabase db) {
             Log.i("greenDAO", "Creating tables for schema version " + SCHEMA_VERSION);
             createAllTables(db, false);
+
         }
     }
     
